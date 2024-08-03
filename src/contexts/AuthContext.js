@@ -10,7 +10,7 @@ export const AuthProvider = ({ children }) => {
     const fetchUser = async () => {
       try {
         console.log("fetchUser");
-        const response = await axios.get('http://localhost:5000/api/users/checkuser',
+        const response = await axios.get('https://clawecommerce.onrender.com//api/users/checkuser',
           {withCredentials: true}
         );
         console.log(response);
@@ -23,7 +23,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   const login = async ( {email, password} ) => {
-    const response = await axios.post('http://localhost:5000/api/users/login', { email, password });
+    const response = await axios.post('https://clawecommerce.onrender.com//api/users/login', { email, password });
     setUser(response.data);
   };
 

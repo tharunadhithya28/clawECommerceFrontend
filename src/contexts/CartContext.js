@@ -21,7 +21,7 @@ const CartProvider = ({ children }) => {
 
   const fetchCart = async () => {
     try {
-      const response = await axios.get('/api/cart');
+      const response = await axios.get('https://clawecommerce.onrender.com//api/cart');
       dispatch({ type: 'SET_CART', payload: response.data });
     } catch (error) {
       console.error('Failed to fetch cart', error);
@@ -30,7 +30,7 @@ const CartProvider = ({ children }) => {
 
   const addToCart = async (product) => {
     try {
-      const response = await axios.post('/api/cart/add', product);
+      const response = await axios.post('https://clawecommerce.onrender.com//api/cart', product);
       dispatch({ type: 'ADD_TO_CART', payload: response.data });
     } catch (error) {
       console.error('Failed to add to cart', error);
@@ -39,7 +39,7 @@ const CartProvider = ({ children }) => {
 
   const removeFromCart = async (id) => {
     try {
-      await axios.delete(`/api/cart/remove/${id}`);
+      await axios.delete(`https://clawecommerce.onrender.com//api/cart/${id}`);
       dispatch({ type: 'REMOVE_FROM_CART', payload: id });
     } catch (error) {
       console.error('Failed to remove from cart', error);
