@@ -1,0 +1,21 @@
+.products {
+    padding: 2rem;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .product-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    width: 30%;
+    box-sizing: border-box;
+  }
+  
+  .product-item h2 {
+    font-size: 1.5rem;
+  }
+  
